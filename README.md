@@ -12,3 +12,6 @@ Web App Functionality:
   
 This is a demo video to see how it works:
 https://drive.google.com/file/d/1ZpjVurVYCDz6JhIkFqkaH7Rzj52VBouh/view
+
+To have more info about the OAuth 2.0 with Okta here is a general overview:
+https://developer.okta.com/use_cases/api_access_management/
