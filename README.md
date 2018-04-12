@@ -8,4 +8,4 @@ Web App Functionality:
 4. Ability to change password on your Okta User.
 5. Demo is in heroku so you can test over the web or mobile. It has responsive design.
   Live Demo here -> http://bunker-web-app.herokuapp.com/
-    Note: Is a free heroku account so it will take a few seconds the first time.
+  Note: Is a free heroku account so it will take a few seconds the first time.
