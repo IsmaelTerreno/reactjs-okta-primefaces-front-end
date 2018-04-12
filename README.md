@@ -15,3 +15,6 @@ https://drive.google.com/file/d/1ZpjVurVYCDz6JhIkFqkaH7Rzj52VBouh/view
 
 To have more info about the OAuth 2.0 with Okta here is a general overview:
 https://developer.okta.com/use_cases/api_access_management/
+Here is the Backend with Okta used by the frontend:
+Nodejs act as resource server using okta API services + FrontEnd in Reactjs using this backend
+https://github.com/IsmaelTerreno/nodejs-resource-server-okta-back-end
