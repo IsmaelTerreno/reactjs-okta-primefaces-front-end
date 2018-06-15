@@ -22,13 +22,11 @@ class ChangePassword extends Component {
         currentUser: PropTypes.instanceOf(User),
         userMessages: PropTypes.array
     };
-    constructor(props) {
-        super(props);
-        this.state = {
-            oldPassword: '',
-            newPassword: '',
-        };
-    }
+    static defaultProps = {
+        oldPassword: '',
+        newPassword: '',
+    };
+
     oldPasswordChange = (event) => {
         this.setState({oldPassword: event.target.value});
     };

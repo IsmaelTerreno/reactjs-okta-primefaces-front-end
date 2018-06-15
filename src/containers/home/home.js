@@ -25,9 +25,9 @@ class Home extends Component {
         accessToken: PropTypes.string,
         currentUser: PropTypes.instanceOf(User)
     };
-    constructor(props) {
-        super(props);
-        this.state = { authenticated: null };
+    static defaultProps = { authenticated: null };
+
+    componentDidMount(){
         this.checkAuthentication();
     }
     componentDidUpdate() {

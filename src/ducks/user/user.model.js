@@ -7,12 +7,12 @@ export const User = (
     password
 ) => {
     return {
-        "id": id,
+        id,
         "profile": {
-            "firstName": firstName,
-            "lastName": lastName,
-            "email": email,
-            "login": login
+            firstName,
+            lastName,
+            email,
+            login
         },
         "credentials": {
             "password": {

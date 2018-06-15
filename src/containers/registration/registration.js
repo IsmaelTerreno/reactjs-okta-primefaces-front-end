@@ -11,6 +11,7 @@ import { withRouter } from 'react-router-dom';
 import { User } from '../../ducks/user/user.model';
 
 class Registration extends Component {
+
     static propTypes = {
         isFetching: PropTypes.bool,
         dispatch: PropTypes.func,
@@ -19,32 +20,30 @@ class Registration extends Component {
         }),
         registerUser: PropTypes.func.isRequired
     };
-    constructor(props) {
-        super(props);
-        this.state = {
-            firstName: '',
-            lastName: '',
-            email: '',
-            password: '',
+    static defaultProps = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
 
-        };
-    }
-    firstNameChange = (event) => {
-        this.setState({firstName: event.target.value});
     };
-    lastNameChange = (event) => {
-        this.setState({lastName: event.target.value});
+
+    firstNameChange = evt => {
+        this.setState({firstName: evt.target.value});
     };
-    emailChange = (event) => {
-        this.setState({email: event.target.value});
+    lastNameChange = evt => {
+        this.setState({lastName: evt.target.value});
     };
-    passwordChange = (event) => {
-        this.setState({password: event.target.value});
+    emailChange = evt => {
+        this.setState({email: evt.target.value});
+    };
+    passwordChange = evt => {
+        this.setState({password: evt.target.value});
     };
     cancelRegistration = () => {
         this.props.history.push('/');
     };
-    sigInUser = (e) => {
+    sigInUser = evt => {
         const userLogin = User(
             null,
             this.state.firstName,
@@ -54,7 +53,7 @@ class Registration extends Component {
             this.state.password
         );
         this.props.registerUser(userLogin);
-        e.preventDefault();
+        evt.preventDefault();
     };
     componentDidUpdate(){
         const {userMessages} = this.props;
@@ -123,7 +122,7 @@ class Registration extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        registerUser: (user) => dispatch(registerUser(user)),
+        registerUser: user => dispatch(registerUser(user)),
         clearUserMessages: () => dispatch(clearUserMessages())
     }
 };
