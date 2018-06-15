@@ -22,7 +22,8 @@ class ChangePassword extends Component {
         currentUser: PropTypes.instanceOf(User),
         userMessages: PropTypes.array
     };
-    static defaultProps = {
+
+    state = {
         oldPassword: '',
         newPassword: '',
     };
